@@ -13,8 +13,10 @@ const MongoStore         = require('connect-mongo')(session);
 const mongoose           = require('mongoose');
 const flash              = require('connect-flash');
 const hbs                = require('hbs')
+const dotenv             = require('dotenv').config()
 
-mongoose.connect('mongodb://localhost:27017/tumblr-lab-development');
+
+mongoose.connect(`mongodb://localhost:27017/${process.env.DB}`);
 
 const app = express();
 
@@ -26,7 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use(session({
-  secret: 'tumblrlabdev',
+  secret: 'artGallery project',
   resave: false,
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
@@ -49,10 +51,10 @@ passport.use('local-login', new LocalStrategy((username, password, next) => {
       return next(err);
     }
     if (!user) {
-      return next(null, false, { message: "Incorrect username" });
+      return next(null, false, { message: "Usuario incorrecto" });
     }
     if (!bcrypt.compareSync(password, user.password)) {
-      return next(null, false, { message: "Incorrect password" });
+      return next(null, false, { message: "Contraseña incorrecta" });
     }
 
     return next(null, user);
@@ -110,10 +112,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const index = require('./routes/index')
-const authRoutes = require('./routes/authentication')
+const index = require('./routes/index.routes')
+const authRoutes = require('./routes/authentication.routes')
 app.use('/', index)
-app.use('/', authRoutes)
+app.use('/auth', authRoutes)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
