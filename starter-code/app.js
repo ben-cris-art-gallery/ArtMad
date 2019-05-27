@@ -1,5 +1,3 @@
-
-
 const express            = require('express');
 const path               = require('path');
 const favicon            = require('serve-favicon');
@@ -116,12 +114,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index.routes')
 const authRoutes = require('./routes/authentication.routes')
-const artistRoutes = require('./routes/artists.routes')
-const galleryRoutes = require('./routes/galleries.routes')
+//const artistRoutes = require('./routes/artists.routes')
 app.use('/', index)
 app.use('/', authRoutes)
-app.use('/artist', artistRoutes)
-app.use('/gallery', galleryRoutes)
+//app.use('/artist', artistRoutes)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
