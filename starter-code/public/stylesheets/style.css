@@ -5,6 +5,7 @@
     position: fixed;
     width: 100%;
     padding: 20px 30px;
+    background-color: white;
 }
 .logo{
     margin-left: 4vw;
@@ -38,9 +39,7 @@
     margin-right: 4vw;
 }
 .footer {
-    position: fixed;
     bottom: 0px;
-    margin-bottom: 20px;
 }
 .footer ul{
     display: inline-block;
@@ -74,3 +73,29 @@
     height: 50vh;
     background-image: url('/images/picasso-hero.jpg');
 }
+/*----Seleccion----*/
+.selection img{
+    height: 220px;
+    width: 220px;
+    object-fit: cover;
+}
+.inicio{
+   margin: 5px 30px;
+}
+.center{
+    margin-left: 4%;
+}
+.inicio h1{
+    padding: 2% 0;
+    font-weight: lighter;
+    font-size: 2em;
+}
+.center a{
+    text-decoration: none;
+    color: rgb(19, 18, 18);
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 0.9em;    
+}
+/*----artists list----*/
+
