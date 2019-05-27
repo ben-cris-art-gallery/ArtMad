@@ -114,8 +114,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index.routes')
 const authRoutes = require('./routes/authentication.routes')
+const artistRoutes = require('./routes/artists.routes')
+const galleryRoutes = require('./routes/galleries.routes')
 app.use('/', index)
-app.use('/auth', authRoutes)
+app.use('/', authRoutes)
+app.use('/artist', artistRoutes)
+app.use('/gallery', galleryRoutes)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
