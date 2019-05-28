@@ -1,4 +1,5 @@
 .navigation {
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
@@ -128,7 +129,7 @@
 }
 
 .artist-description img {
-    width: 600px;
+    height: 450px;
 }
 
 .artist-description-art{
@@ -138,5 +139,10 @@
     justify-content: start;
 }
 .artist-description-art img {
+    width: 250px;
     margin: 30px;
+}
+.profile-picture{
+    width: 11px;
+    
 }
