@@ -34,12 +34,9 @@
     font-size: 1.2em;
 }
 .content{
-    padding-top: 400px;
+    padding-top: 200px;
     margin-left: 4vw;
     margin-right: 4vw;
-}
-.footer {
-    bottom: 0px;
 }
 .footer ul{
     display: inline-block;

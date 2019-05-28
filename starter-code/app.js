@@ -112,12 +112,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+hbs.registerPartials(__dirname + '/views/partials')
+
 const index = require('./routes/index.routes')
 const authRoutes = require('./routes/authentication.routes')
-//const artistRoutes = require('./routes/artists.routes')
+const artistRoutes = require('./routes/artists.routes')
+const galleriesRoutes = require('./routes/galleries.routes')
+const privateRoutes = require('./routes/private.routes')
 app.use('/', index)
 app.use('/', authRoutes)
-//app.use('/artist', artistRoutes)
+app.use('/artist', artistRoutes)
+app.use('/galleries', galleriesRoutes)
+app.use('/private', privateRoutes)
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
