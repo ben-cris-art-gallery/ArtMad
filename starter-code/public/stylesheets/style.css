@@ -8,6 +8,7 @@
     background-color: white;
 }
 .logo{
+   
     margin-left: 4vw;
     margin-right: 4vw;
     text-transform: uppercase;
@@ -28,9 +29,9 @@
     text-decoration: none;
     color: rgb(19, 18, 18);
     font-weight: bolder;
-    display: block;
+    display: inline;
     font-family: 'Montserrat';
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .content{
     padding-top: 200px;
@@ -95,4 +96,23 @@
     font-size: 0.9em;    
 }
 /*----artists list----*/
+.section-title {
 
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 300;
+}
+.artist-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.user {
+    margin: 8px;
+    width: 300px
+}
+.user img {
+    width: 300px;
+    object-fit: cover;
+}
