@@ -81,7 +81,7 @@ passport.use('local-signup',  new LocalStrategy(
                 return next(null, false);
             } else {
                 // Destructure the body
-                const { username, email, password } = req.body;
+                const { username, email, password, role } = req.body;
                 console.log(req.file)
                 const imgPath = req.file.url
                 const imgName = req.file.originalname
@@ -91,7 +91,8 @@ passport.use('local-signup',  new LocalStrategy(
                   email,
                   password: hashPass,
                   imgPath,
-                  imgName
+                  imgName,
+                  role,
                 });
 
                 newUser.save((err) => {

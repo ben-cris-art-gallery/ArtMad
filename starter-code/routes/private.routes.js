@@ -12,13 +12,20 @@ router.get('/profile', ensureLoggedIn('/login'), (req, res) => {
 })
 
 router.post('/edit/:user_id',cloudinaryConfig.single('photo'),(req, res)=>{
-  let {username, email, description}= req.body
-  const imgPath = req.file.url
-  const imgName = req.file.originalname
+  const update = {username, email, description}= req.body
+
+  if(req.file){
+    update.imgPath = req.file.url
+    update.imgName = req.file.originalname
+
+  }
   
-  User.findByIdAndUpdate(req.params.user_id, {username, email, description, imgPath, imgName}, {new: true})
-    .then(() => res.redirect('/private/profile'))
+  User.findByIdAndUpdate(req.params.user_id, update, {new: true})
+    .then(() =>{
+      res.redirect('/private/profile')
+    } )
     .catch(error => next(error))
+
 })
 
 //VIEW ARWORKS AND CONTENT
