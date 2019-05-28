@@ -16,7 +16,6 @@
     font-size: 2.5em;
     text-decoration: none;
     color: rgb(19, 18, 18);
-
 }
 .navigation ul{
     display: inline-block;
@@ -78,6 +77,7 @@
 }
 .inicio{
    margin: 5px 30px;
+   font-family: 'Montserrat'
 }
 .center{
     margin-left: 4%;
