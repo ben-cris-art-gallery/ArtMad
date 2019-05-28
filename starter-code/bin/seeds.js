@@ -37,6 +37,136 @@ const users = [
 
 
   },
+  {
+    username: "James Watts",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "ARTIST",
+    email:    'jameswatts@gmail.com',
+    content:[],
+    imgName: "213_N89_rxuqxf",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965423/artmad/213_N89_rxuqxf.jpg",
+    artworks: [],
+  
+
+  },
+  {
+    username: "Annely Juda Fine Art",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "GALLERY",
+    email:   'annely@gmail.com',
+    content:[],
+    imgName: "1533903041_650831_1533903471_noticia_normal_wfe0au",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    artworks: [],
+
+
+  },
+  {
+    username: "James Watts",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "ARTIST",
+    email:    'jameswatts@gmail.com',
+    content:[],
+    imgName: "213_N89_rxuqxf",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965423/artmad/213_N89_rxuqxf.jpg",
+    artworks: [],
+  
+
+  },
+  {
+    username: "Annely Juda Fine Art",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "GALLERY",
+    email:   'annely@gmail.com',
+    content:[],
+    imgName: "1533903041_650831_1533903471_noticia_normal_wfe0au",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    artworks: [],
+
+
+  },
+  {
+    username: "James Watts",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "ARTIST",
+    email:    'jameswatts@gmail.com',
+    content:[],
+    imgName: "213_N89_rxuqxf",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965423/artmad/213_N89_rxuqxf.jpg",
+    artworks: [],
+  
+
+  },
+  {
+    username: "Annely Juda Fine Art",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "GALLERY",
+    email:   'annely@gmail.com',
+    content:[],
+    imgName: "1533903041_650831_1533903471_noticia_normal_wfe0au",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    artworks: [],
+
+
+  },
+  {
+    username: "James Watts",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "ARTIST",
+    email:    'jameswatts@gmail.com',
+    content:[],
+    imgName: "213_N89_rxuqxf",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965423/artmad/213_N89_rxuqxf.jpg",
+    artworks: [],
+  
+
+  },
+  {
+    username: "Annely Juda Fine Art",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "GALLERY",
+    email:   'annely@gmail.com',
+    content:[],
+    imgName: "1533903041_650831_1533903471_noticia_normal_wfe0au",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    artworks: [],
+
+
+  },
+  {
+    username: "James Watts",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "ARTIST",
+    email:    'jameswatts@gmail.com',
+    content:[],
+    imgName: "213_N89_rxuqxf",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965423/artmad/213_N89_rxuqxf.jpg",
+    artworks: [],
+  
+
+  },
+  {
+    username: "Annely Juda Fine Art",
+    password: "1234",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    role: "GALLERY",
+    email:   'annely@gmail.com',
+    content:[],
+    imgName: "1533903041_650831_1533903471_noticia_normal_wfe0au",
+    imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    artworks: [],
+
+
+  },
 ]
 
 let artworks = [
