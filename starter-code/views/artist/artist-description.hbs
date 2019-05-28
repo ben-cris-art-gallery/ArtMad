@@ -1,9 +1,17 @@
 
 
 <div class="artist-description">
-  <h2>{{thisArtist.username}}</h2>
-  <img src="{{thisArtist.imgPath}}" alt="profile picture">
+  <h2>{{artist.username}}</h2>
+  <img src="{{artist.imgPath}}" alt="profile picture">
 </div>
 <hr>
-<p>{{thisArtist.description}}</p>   
+<p>{{artist.description}}</p> 
+
+
+<div class="artist-description-art">
+  {{#each artist.artworks}}
+   <a href="#"><img src="{{this.imgPath}}" alt="{{this.imgName}}"></a> 
+  {{/each}}
+</div>
+
 
