@@ -1,11 +1,21 @@
 <h1>estos serán los conteniiiiidooooos</h1>
 
-<form action="arts/{{user._id}}" method="POST" enctype="multipart/form-data">
+{{#each user.artworks}}
+<h3>{{this.title}}</h3>
+<h4>{{this.description}}</h4>
+<img src="{{this.imgPath}}" alt="Obra">
+{{/each}}
+
+
+<form action="arts/new" method="POST" enctype="multipart/form-data">
+    <label for="name">Título de la obra</label>
+    <input type="text" name="title" id="name">
+
     <label for="desc">Descripción de la obra</label>
     <input type="text" name="description" id="desc">
 
     <label for="date">Fecha de creación:</label>
-    <input type="text"  name=" dateCreated" id="date">
+    <input type="date"  name="dateCreated" id="date">
     
     <label for="art-photo">Subir obras de arte</label>
     <input type="file" name="photo" id="art-photo">

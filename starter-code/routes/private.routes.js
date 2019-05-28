@@ -24,17 +24,29 @@ router.post('/edit/:user_id',cloudinaryConfig.single('photo'),(req, res)=>{
 //VIEW ARWORKS AND CONTENT
 
 router.get('/arts', ensureLoggedIn('/login'), (req, res)=>{
-  res.render('profile-content', {user:req.user})
+  User.findById(req.user._id)
+  .populate('artworks')
+  .then(user =>{
+    res.render('profile-content', { user })
+  })
+  .catch(error => console.log(error))  
 })
 
-router.post('/arts/:user_id', cloudinaryConfig.single('photo'), (req, res)=>{
-  let {description, dateCreated}= req.body
+router.post('/arts/new', cloudinaryConfig.single('photo'), (req, res)=>{
+  let {title, description, dateCreated}= req.body
   const imgName = req.file.originalname
   const imgPath = req.file.url
-
-  const newArt= new Artwork ({decription, dateCreated, imgName, imgPath})
+  const author = req.user._id
+  const newArt= new Artwork ({title, description, dateCreated, imgName, imgPath, author})
   newArt.save()
-    .then()
+    .then(art=>{
+      User.findByIdAndUpdate(req.user._id, {$push:{artworks: art._id}})
+        .then(artist=>{
+          res.redirect('/private/arts')
+        })
+        .catch(err=>{console.log(err)})
+    })
+    .catch(error => console.log(error))
 
 })
 
