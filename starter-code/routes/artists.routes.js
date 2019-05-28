@@ -20,7 +20,7 @@ router.get('/detail/:artist_id',(req,res)=>{
   console.log(req.params.user_id)
   User.find()
     .then((artist) => {
-      thisArtist = artist.find(thisArtist => thisArtist._id == req.params.artist_id)
+      let thisArtist = artist.find(thisArtist => thisArtist._id == req.params.artist_id)
       //console.log(`Este es el artist ${thisArtist}`)
       res.render('artist/artist-description', {thisArtist})
     })

@@ -1,0 +1,23 @@
+<figure>
+    <img src="{{user.imgPath}}" alt="profipe-photo-user">
+</figure>
+
+<form action="edit/{{user._id}}" method="post" enctype="multipart/form-data">
+   
+    <label for="">Nombre:</label>
+    <input type="text" name="username" value="{{user.username}}"><br>
+
+    <label for="">Email:</label>
+    <input type="email" name="email" value="{{user.email}}"><br>
+
+    <label for="">Descripción:</label>
+    <input type="text" name="description" value="{{user.description}}"><br>
+
+    <label for="profile-photo">Subir nueva foto de perfil</label>
+    <input type="file" name="photo" id="profile-photo">
+
+    <button type="submit">Salvar cambios</button>
+
+</form>
+
+<a href="/private/arts">Más</a>
