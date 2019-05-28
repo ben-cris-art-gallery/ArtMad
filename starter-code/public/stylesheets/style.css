@@ -116,3 +116,17 @@
     width: 300px;
     object-fit: cover;
 }
+/*----artists description----*/
+
+.artist-description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px, 0, 10px, 0;
+}
+
+.artist-description img {
+    width: 600px;
+}
