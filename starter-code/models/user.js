@@ -15,6 +15,8 @@ const UserSchema = Schema({
   artworks:[{type: Schema.Types.ObjectId, ref: 'Artwork'}],
   imgName: String,
   imgPath: String,
+  genre: {type: String, enum : ['pintura', 'escultura', 'fotografia', 'instalacion'],
+  default : 'pintura'},
   location: {
     type: { type: String },
     coordinates: [Number]
