@@ -40,7 +40,7 @@ const users = [{},
     artworks: [],
     imgName: "javier-ayuso",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132732/artmad/javier-ayuso.jpg",
-    genre: 'fotografía',
+    genre: 'fotografia',
   },
   {
     username: "Pilar Barrios",
@@ -52,7 +52,7 @@ const users = [{},
     artworks: [],
     imgName: "Pilar-Barrios",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132749/artmad/Pilar-Barrios.jpg",
-    genre: 'instalación',
+    genre: 'instalacion',
   },
   {
     username: "Alberto Cea",
@@ -79,7 +79,7 @@ const users = [{},
     artworks: [],
     imgName: "herraizGaleria_qcikvf",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132571/artmad/herraizGaleria_qcikvf.png",
-    genre: ['pintura', 'escultura', 'fotografía'],
+    genre: ['pintura', 'escultura', 'fotografia'],
     location: [40.428833, -3.678207]
   },
   {
@@ -95,7 +95,7 @@ const users = [{},
     artworks: [],
     imgName: "kreislerGaleria_racgne",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132582/artmad/kreislerGaleria_racgne.png",
-    genre: ['pintura', 'escultura','instalación'],
+    genre: ['pintura', 'escultura','instalacion'],
     location: [40.4264718, -3.6883202]
   },
   {
@@ -108,7 +108,7 @@ const users = [{},
     artworks: [],
     imgName: "batGaleria_luoqzl",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132565/artmad/batGaleria_luoqzl.png",
-    genre: ['pintura', 'fotografía', 'instalación'],
+    genre: ['pintura', 'fotografia', 'instalacion'],
     location: [40.4440471, -3.6962407]
   },
   {
@@ -123,7 +123,7 @@ const users = [{},
     artworks: [],
     imgName: "juanaGaleria_oh6v6k",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132576/artmad/juanaGaleria_oh6v6k.png",
-    genre: ['escultura', 'fotografía', 'instalación'],
+    genre: ['escultura', 'fotografia', 'instalacion'],
     location: [40.4242672, -3.6954675]
   }
 ]
@@ -199,7 +199,7 @@ let artworks = [
     dateCreated: '2017-03-27' ,  
     imgName: 'ayusosilla_vh89vv',
     imgPath: 'https://res.cloudinary.com/dgesryvti/image/upload/v1559132732/artmad/ayusosilla_vh89vv.jpg' ,
-    genre: 'fotografía'
+    genre: 'fotografia'
   },
   {
     title: 'Lights', 
@@ -209,7 +209,7 @@ let artworks = [
     dateCreated: '2019-01-28' ,  
     imgName: 'ayusoCono_lx1ifd' ,
     imgPath: 'https://res.cloudinary.com/dgesryvti/image/upload/v1559132732/artmad/ayusoCono_lx1ifd.jpg',
-    genre: 'fotografía'
+    genre: 'fotografia'
   },
   {
     title: 'Soledad', 
@@ -219,7 +219,7 @@ let artworks = [
     dateCreated: '2018-11-20' ,  
     imgName: 'ayusodef_yaykxn' ,
     imgPath: 'https://res.cloudinary.com/dgesryvti/image/upload/v1559132732/artmad/ayusodef_yaykxn.jpg',
-    genre:'fotografía'
+    genre:'fotografia'
   },
   {
     title:'Plegar el vacío-pieza A', 
@@ -229,7 +229,7 @@ let artworks = [
     dateCreated:'2017-12-26' ,  
     imgName: '18_PilarBarrios_PlegarElVacio_pieza_A_e_w_bfdiyn' ,
     imgPath: 'https://res.cloudinary.com/dgesryvti/image/upload/v1559132749/artmad/18_PilarBarrios_PlegarElVacio_pieza_A_e_w_bfdiyn.jpg',
-    genre:'instalación'
+    genre:'instalacion'
   },
   {
     title:'Plegar el vacío-pieza B', 
@@ -239,7 +239,7 @@ let artworks = [
     dateCreated:'2018-04-24' ,  
     imgName:'18_Pieza_E_Plegar_el_Vacio_PilarBarrios-1_yfpwmp' ,
     imgPath: 'https://res.cloudinary.com/dgesryvti/image/upload/v1559132749/artmad/18_Pieza_E_Plegar_el_Vacio_PilarBarrios-1_yfpwmp.jpg',
-    genre:'instalación'
+    genre:'instalacion'
   },
   {
     title: 'Poliedro', 

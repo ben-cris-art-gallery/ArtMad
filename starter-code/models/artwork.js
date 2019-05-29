@@ -10,7 +10,7 @@ const artWorkSchema = Schema({
   dateCreated: Date,  
   imgName: String,
   imgPath: String,
-  genre: {type: String, enum : ['pintura', 'escultura', 'fotografía', 'instalación'],
+  genre: {type: String, enum : ['pintura', 'escultura', 'fotografia', 'instalacion'],
   default : 'pintura'}
 })
 
