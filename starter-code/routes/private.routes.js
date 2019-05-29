@@ -8,7 +8,9 @@ const Artwork = require('../models/artwork')
 //VIEW AND EDIT PROFILE
 
 router.get('/profile', ensureLoggedIn('/login'), (req, res) => {
-  res.render('profile', { message: req.flash('error'), user:req.user});
+  let isGallery = false
+  if(req.user.role == "GALLERY")isGallery = true
+      res.render('profile', { message: req.flash('error'), user:req.user, isGallery});
 })
 
 router.post('/edit/:user_id',cloudinaryConfig.single('photo'),(req, res)=>{
@@ -42,7 +44,9 @@ router.get('/arts', ensureLoggedIn('/login'), (req, res)=>{
   User.findById(req.user._id)
   .populate('artworks')
   .then(user =>{
-    res.render('profile-content', { user })
+    let isGallery = false
+    if(req.user.role == "GALLERY")isGallery = true
+    res.render('profile-content', { user, isGallery })
   })
   .catch(error => console.log(error))  
 })
@@ -50,11 +54,26 @@ router.get('/arts', ensureLoggedIn('/login'), (req, res)=>{
 //ADD ARTWORKS
 
 router.post('/arts/new', cloudinaryConfig.single('photo'), (req, res)=>{
-  let {title, description, dateCreated}= req.body
+  let {title, description, dateCreated, genre}= req.body
   const imgName = req.file.originalname
   const imgPath = req.file.url
-  const author = req.user._id
-  const newArt= new Artwork ({title, description, dateCreated, imgName, imgPath, author})
+
+  let author
+  let gallery
+  let authorForGallery
+  //CHEQUEAR ROLES!!!!
+  if(req.user.role== 'ARTIST'){
+    author = req.user._id
+    gallery =undefined
+  }
+  if(req.user.role== 'GALLERY'){
+    gallery = req.user._id
+    author=undefined
+    authorForGallery=req.body
+  }
+
+  
+  const newArt= new Artwork ({title, description, dateCreated, imgName, imgPath, genre, author, gallery, authorForGallery})
   newArt.save()
     .then(art=>{
       User.findByIdAndUpdate(req.user._id, {$push:{artworks: art._id}})
@@ -66,5 +85,8 @@ router.post('/arts/new', cloudinaryConfig.single('photo'), (req, res)=>{
     .catch(error => console.log(error))
 
 })
+
+
+//EDITAR OBRA
 
 module.exports = router

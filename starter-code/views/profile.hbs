@@ -14,13 +14,16 @@
     <input type="text" name="description" value="{{user.description}}">
 
     
-
+    {{#if isGallery}}
+    
     <label>Ubicación exacta:</label>
     <label for="lat">Latitud</label>
     <input type="text" name="latitude" placeholder="{{user.location.coordinates.[0]}}" id="lat">
     <label for="lng">Longitud</label>
     <input type="text" name="longitude" placeholder="{{user.location.coordinates.[1]}}" id="lng">
-
+    
+    {{/if}}
+    
     <label for="profile-photo">Subir nueva foto de perfil</label>
     <input type="file" name="photo" id="profile-photo">
 
