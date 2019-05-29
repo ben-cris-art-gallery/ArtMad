@@ -3,6 +3,9 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 const Artwork = require('../models/artwork');
 const User = require('../models/user');
+const bcrypt = require('bcrypt');
+
+const hashPass = bcrypt.hashSync('1234', bcrypt.genSaltSync(8), null);
 
 //const dbName = 'MAD-ART'
 mongoose.connect(`mongodb://localhost/${process.env.DB}`)
@@ -13,7 +16,7 @@ Artwork.collection.deleteMany()
 const users = [
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -26,7 +29,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -39,7 +42,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -52,7 +55,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -65,7 +68,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -78,7 +81,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -91,7 +94,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -104,7 +107,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -117,7 +120,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -130,7 +133,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -143,7 +146,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -156,7 +159,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -169,7 +172,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -182,7 +185,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',
@@ -195,7 +198,7 @@ const users = [
   },
   {
     username: "James Watts",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "ARTIST",
     email:    'jameswatts@gmail.com',
@@ -208,7 +211,7 @@ const users = [
   },
   {
     username: "Annely Juda Fine Art",
-    password: "1234",
+    password: hashPass,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     role: "GALLERY",
     email:   'annely@gmail.com',

@@ -65,11 +65,12 @@ router.post('/arts/new', cloudinaryConfig.single('photo'), (req, res)=>{
   if(req.user.role== 'ARTIST'){
     author = req.user._id
     gallery =undefined
+    authorForGallery= undefined
   }
   if(req.user.role== 'GALLERY'){
     gallery = req.user._id
     author=undefined
-    authorForGallery=req.body
+    authorForGallery=req.body.authorForGallery
   }
 
   
