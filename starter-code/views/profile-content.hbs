@@ -2,7 +2,8 @@
 
 {{#each user.artworks}}
 <h3>{{this.title}}</h3>
-<h4>{{this.description}}</h4>
+<p>{{this.genre}}</p>
+<p>{{this.description}}</p>
 <img src="{{this.imgPath}}" alt="Obra">
 {{/each}}
 
@@ -11,15 +12,30 @@
     <label for="name">Título de la obra</label>
     <input type="text" name="title" id="name">
 
+    {{#if isGallery}}
+
+      <label for="arts">Autor de la obra</label>
+      <input type="text" name="authorForGallery" id="arts">
+
+    {{/if}}
+
     <label for="desc">Descripción de la obra</label>
     <input type="text" name="description" id="desc">
 
-    <label for="date">Fecha de creación:</label>
+    <label for="date">Fecha de creación</label>
     <input type="date"  name="dateCreated" id="date">
     
-    <label for="art-photo">Subir obras de arte</label>
-    <input type="file" name="photo" id="art-photo">
+    <select name="genre" id="gen">
+
+      <option value="">Género de la obra</option>
+      <option  value="pintura">Pintura</option>
+      <option  value="escultura">Escultura</option>
+      <option  value="fotografía">Fotografía</option>
+      <option  value="instalación">Instalación</option>
     
+    <label for="art-photo">Elegir obra</label>
+    <input type="file" name="photo" id="art-photo">
+ 
     <button type="submit">Subir obra</button>
 </form>    
 
