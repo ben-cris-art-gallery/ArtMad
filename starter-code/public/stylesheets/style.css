@@ -97,6 +97,12 @@
     font-size: 0.9em;    
 }
 /*----artists list----*/
+.contain {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+}
 .section-title {
 
    font-family: 'Times New Roman', Times, serif;
@@ -107,6 +113,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
+    width: 800px;
 }
 
 .user {
@@ -117,6 +124,7 @@
     width: 300px;
     object-fit: cover;
 }
+
 /*----artists description----*/
 
 .artist-description {
@@ -146,3 +154,4 @@
     width: 11px;
     
 }
+

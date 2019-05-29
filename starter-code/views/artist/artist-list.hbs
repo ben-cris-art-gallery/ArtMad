@@ -1,4 +1,4 @@
-<div>
+{{!-- <div>
 <h2 class="section-title">Artistas</h2>
 <hr>
     <div class="artist-list">
@@ -6,5 +6,55 @@
     {{> userCard}}
 {{/each}}
 </div>
+</div> --}}
+
+<h2 class="section-title">Artistas</h2>
+<hr>
+<div class="contain">
+
+    
+    <div class="param-list">
+        <h3>Medios</h3>
+        <form action="">
+        <div>
+            <input type="radio" name="medios" id="pintura"> 
+            <label for="pintura">Pintura</label>
+        </div>
+        <div>
+            <input type="radio" name="medios" id="escultura"> 
+            <label for="escultura">Escultura</label>
+        </div>
+        <div>
+            <input type="radio" name="medios" id="instalación"> 
+            <label for="instalación">Instalación</label>
+        </div>
+        <div>
+            <input type="radio" name="medios" id="collage"> 
+            <label for="collage">Collage</label>
+        </div>
+        <div>
+            <input type="radio" name="medios" id="ilustracion"> 
+            <label for="ilustracion">Ilustración</label>
+        </div>
+        <div>
+            <input type="radio" name="medios" id="galeria"> 
+            <label for="galeria">Galeria</label>
+        </div>
+        <div>
+            <input type="radio" name="medios" id="artista"> 
+            <label for="artista">Artista</label>
+        </div>
+    </div>
+    </form>
+    <hr>
+
+    <div class="artist-list">  
+        {{!-- {{#each artist}}
+        {{> userCard}}
+    {{/each}} </div> --}}
+
+
 </div>
+
+
 
