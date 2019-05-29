@@ -13,22 +13,30 @@ router.get('/profile', ensureLoggedIn('/login'), (req, res) => {
 
 router.post('/edit/:user_id',cloudinaryConfig.single('photo'),(req, res)=>{
   const update = {username, email, description}= req.body
-
+  
+   
   if(req.file){
     update.imgPath = req.file.url
     update.imgName = req.file.originalname
-
   }
   
+  if(req.body.longitude||req.body.latitude){
+    update.location = {
+      type: 'Point',
+      coordinates: [req.body.longitude, req.body.latitude]
+    }
+  }
+
   User.findByIdAndUpdate(req.params.user_id, update, {new: true})
     .then(() =>{
+      console.log(req.body)
       res.redirect('/private/profile')
     } )
     .catch(error => next(error))
 
 })
 
-//VIEW ARWORKS AND CONTENT
+//VIEW ARTWORKS AND CONTENT
 
 router.get('/arts', ensureLoggedIn('/login'), (req, res)=>{
   User.findById(req.user._id)
@@ -38,6 +46,8 @@ router.get('/arts', ensureLoggedIn('/login'), (req, res)=>{
   })
   .catch(error => console.log(error))  
 })
+
+//ADD ARTWORKS
 
 router.post('/arts/new', cloudinaryConfig.single('photo'), (req, res)=>{
   let {title, description, dateCreated}= req.body

@@ -15,6 +15,10 @@ const UserSchema = Schema({
   artworks:[{type: Schema.Types.ObjectId, ref: 'Artwork'}],
   imgName: String,
   imgPath: String,
+  location: {
+    type: { type: String },
+    coordinates: [Number]
+  }
 })
 
 const User = mongoose.model('User', UserSchema)

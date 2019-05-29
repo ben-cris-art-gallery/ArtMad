@@ -5,16 +5,26 @@
 <form action="edit/{{user._id}}" method="post" enctype="multipart/form-data">
    
     <label for="">Nombre:</label>
-    <input type="text" name="username" value="{{user.username}}"><br>
+    <input type="text" name="username" value="{{user.username}}">
 
     <label for="">Email:</label>
-    <input type="email" name="email" value="{{user.email}}"><br>
+    <input type="email" name="email" value="{{user.email}}">
 
     <label for="">Descripción:</label>
-    <input type="text" name="description" value="{{user.description}}"><br>
+    <input type="text" name="description" value="{{user.description}}">
+
+    
+
+    <label>Ubicación exacta:</label>
+    <label for="lat">Latitud</label>
+    <input type="text" name="latitude" placeholder="{{user.location.coordinates.[0]}}" id="lat">
+    <label for="lng">Longitud</label>
+    <input type="text" name="longitude" placeholder="{{user.location.coordinates.[1]}}" id="lng">
 
     <label for="profile-photo">Subir nueva foto de perfil</label>
     <input type="file" name="photo" id="profile-photo">
+
+
 
     <button type="submit">Salvar cambios</button>
 
