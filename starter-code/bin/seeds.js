@@ -124,6 +124,7 @@ const users = [
     content:[],
     imgName: "213_N89_rxuqxf",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    genre: 'escultura',
     artworks: [],
   
 
@@ -163,6 +164,7 @@ const users = [
     content:[],
     imgName: "1533903041_650831_1533903471_noticia_normal_wfe0au",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965423/artmad/213_N89_rxuqxf.jpg",
+    genre: 'fotografia',
     artworks: [],
 
 
@@ -202,6 +204,7 @@ const users = [
     content:[],
     imgName: "213_N89_rxuqxf",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1558965398/artmad/1533903041_650831_1533903471_noticia_normal_wfe0au.jpg",
+    genre: 'escultura',
     artworks: [],
   
 

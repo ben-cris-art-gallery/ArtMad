@@ -8,10 +8,17 @@ class APIHandler {
       .then(allUsers=>allUsers.data)
   }
 
+  getFullListArtistsGenre (genre) {
+      return axios.get(`${this.BASE_URL}/genre/${genre}`)
+        .then(allUsers=>allUsers.data)
+    }
+
   getFullListGalleries () {
-    return axios.get(this.BASE_URL)
+    return axios.get(`${this.BASE_URL}/role/GALLERY`)
       .then(allUsers=>allUsers.data)
   }
+  
+  
 
   getOneRegister (id) {
     return axios.get(`${this.BASE_URL}/characters/${id}`)

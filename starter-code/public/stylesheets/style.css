@@ -115,6 +115,23 @@
     justify-content: start;
     width: 800px;
 }
+.artist-list img {
+    width:300px;
+}
+.user-info {
+    width: 400px
+}
+.descripion-info {
+    width: 300px;
+}
+
+.galleries-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 800px;
+}
 
 .user {
     margin: 8px;

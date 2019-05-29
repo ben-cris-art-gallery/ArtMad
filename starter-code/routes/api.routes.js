@@ -28,8 +28,8 @@ User.find({ role:req.params.role })
 
 })
 
-router.get('/role/:role', (req, res, next) =>{
-User.find({ role:req.params.role })
+router.get('/genre/:genre', (req, res, next) =>{
+User.find({ genre:req.params.genre })
 .then((user) => {
   console.log(req.params.role)
   res.json(user)
