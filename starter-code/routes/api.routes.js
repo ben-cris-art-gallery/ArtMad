@@ -1,6 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const User = require("../models/user")
+const Artwork = require("../models/artwork")
 
 
 router.get('/', (req, res, next)=>{
@@ -10,7 +11,15 @@ router.get('/', (req, res, next)=>{
 
 })
 
+router.get('/artworks', (req, res, next)=>{
+  Artwork.find()
+  .then(artworks => res.json(artworks))
+  .catch(error => console.log(error))
+})
+
 router.get('/:id', (req, res, next) =>{
+  console.log('------------------------------------------------------------------------------------------------------------------------------')
+
 User.findById(req.params.id)
 .then(user => res.json(user))
 .catch(error => console.log(error))
@@ -29,7 +38,7 @@ User.find({ role:req.params.role })
 })
 
 router.get('/genre/:genre', (req, res, next) =>{
-User.find({ genre:req.params.genre })
+User.find({$and: [{ genre:req.params.genre }, {role:req.query.role}]})
 .then((user) => {
   console.log(req.params.role)
   res.json(user)
@@ -38,5 +47,6 @@ User.find({ genre:req.params.genre })
 .catch(error => console.log(error))
 
 })
+
  
 module.exports = router

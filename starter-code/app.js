@@ -121,12 +121,15 @@ const artistRoutes = require('./routes/artists.routes')
 const galleriesRoutes = require('./routes/galleries.routes')
 const privateRoutes = require('./routes/private.routes')
 const apiRoutes = require('./routes/api.routes')
+const artworksRoutes = require('./routes/artworks.routes')
+
+app.use('/api', apiRoutes)
 app.use('/', index)
 app.use('/', authRoutes)
 app.use('/artist', artistRoutes)
 app.use('/galleries', galleriesRoutes)
+app.use('/artworks', artworksRoutes)
 app.use('/private', privateRoutes)
-app.use('/api', apiRoutes)
 
 
 // catch 404 and forward to error handler

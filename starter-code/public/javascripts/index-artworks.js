@@ -16,7 +16,7 @@ const esculturaInput = document.querySelector("#escultura")
 
 // Se cargan todos
 
-usersAPI.getFullListArtists()
+usersAPI.getFullListArtworks()
       
 .then(allUsers=>{
         
@@ -30,7 +30,7 @@ usersAPI.getFullListArtists()
 
         let name = document.createElement('div')
             
-        name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.username}</a>`
+        name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`
             
         mediumDiv.appendChild(name) 
 

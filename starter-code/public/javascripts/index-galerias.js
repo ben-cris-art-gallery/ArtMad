@@ -16,7 +16,7 @@ const esculturaInput = document.querySelector("#escultura")
 
 // Se cargan todos
 
-usersAPI.getFullListArtists()
+usersAPI.getFullListGalleries()
       
 .then(allUsers=>{
         
@@ -70,7 +70,7 @@ const paintSelection = (allUsers) =>{
 
 fotografiaInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("fotografia")
+  usersAPI.getFullListGalleriesGenre ("fotografia")
 
   .then(allUsers=>{
         
@@ -85,7 +85,7 @@ fotografiaInput.onclick = ()=>{
 
 pinturaInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("pintura")
+  usersAPI.getFullListGalleriesGenre ("pintura")
 
   .then(allUsers=>{
         
@@ -100,7 +100,7 @@ pinturaInput.onclick = ()=>{
 
 esculturaInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("escultura")
+  usersAPI.getFullListGalleriesGenre ("escultura")
 
   .then(allUsers=>{
         
@@ -114,7 +114,7 @@ esculturaInput.onclick = ()=>{
 
 instalacionInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("instalacion")
+  usersAPI.getFullListGalleriesGenre ("instalacion")
 
   .then(allUsers=>{
         
@@ -128,7 +128,7 @@ instalacionInput.onclick = ()=>{
 
 collageInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("collage")
+  usersAPI.getFullListGalleriesGenre ("collage")
 
   .then(allUsers=>{
         
@@ -142,7 +142,7 @@ collageInput.onclick = ()=>{
 
 ilustracionInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("ilustracion")
+  usersAPI.getFullListGalleriesGenre ("ilustracion")
 
   .then(allUsers=>{
         
