@@ -1,5 +1,6 @@
 .container-all{
-    min-height: 90vh;
+   
+    min-height: 85vh;
 }
 /* layout   */
 
@@ -261,7 +262,9 @@
 }
 
 .artist-description img {
-    height: 450px;
+    margin-top: 135px;
+    margin-bottom: 15px;
+    height: 420px;
 }
 
 .artist-description-art{
