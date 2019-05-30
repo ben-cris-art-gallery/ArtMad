@@ -60,9 +60,9 @@ const paintSelection = (allUsers) =>{
     description.innerHTML = `<p>${user.genre}</p>`
     mediumDiv.appendChild(description) 
 
-    let name = document.createElement('div')  
+    let name = document.createElement('div')
     name.setAttribute('class', 'name-link')
-    name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`  
+    name.innerHTML = `<a href="http://localhost:3000/artworks/detail/${user._id}">${user.title}</a>`
     mediumDiv.appendChild(name) 
 
     
