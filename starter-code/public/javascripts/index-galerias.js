@@ -27,22 +27,25 @@ usersAPI.getFullListGalleries()
         const mediumDiv = document.createElement('div')
               
         mediumDiv.setAttribute('class', 'user-info')
+        
+        let description = document.createElement('div')
+        description.setAttribute('class', 'descripion-info')
+        description.innerHTML = `<p>${user.genre}</p>`
+        
+        mediumDiv.appendChild(description) 
 
         let name = document.createElement('div')
-            
+        name.setAttribute('class', 'name-link')
+        
         name.innerHTML = `<a href="http://localhost:3000/galleries/detail/${user._id}">${user.username}</a>`
             
         mediumDiv.appendChild(name) 
 
+        
         let profileImg = document.createElement('img')
         profileImg.setAttribute('src', `${user.imgPath}`)
         mediumDiv.appendChild(profileImg) 
 
-        // let description = document.createElement('div')
-        // description.setAttribute('class', 'descripion-info')
-        // description.innerHTML = `<p>${user.description}</p>`
-        
-        // mediumDiv.appendChild(description) 
         userContainer.appendChild(mediumDiv)  
   });
 
@@ -50,19 +53,24 @@ usersAPI.getFullListGalleries()
 
 const paintSelection = (allUsers) =>{
   allUsers.forEach(user => { 
+
     const mediumDiv = document.createElement('div')  
     mediumDiv.setAttribute('class', 'user-info')
+
+    let description = document.createElement('div')
+    description.setAttribute('class', 'descripion-info')
+    description.innerHTML = `<p>${user.genre}</p>`
+    mediumDiv.appendChild(description) 
+    userContainer.appendChild(mediumDiv)  
+
     let name = document.createElement('div')  
+    name.setAttribute('class', 'name-link')
     name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.username}</a>`  
     mediumDiv.appendChild(name) 
+
     let profileImg = document.createElement('img')
     profileImg.setAttribute('src', `${user.imgPath}`)
     mediumDiv.appendChild(profileImg) 
-    let description = document.createElement('div')
-    description.setAttribute('class', 'descripion-info')
-    description.innerHTML = `<p>${user.description}</p>`
-    mediumDiv.appendChild(description) 
-    userContainer.appendChild(mediumDiv)  
 });
 }
   

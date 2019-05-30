@@ -1,36 +1,46 @@
-<figure>
+<div class="container-private">
+
+
+
+
+<figure class="private-pic">
     <img src="{{user.imgPath}}" alt="profipe-photo-user">
 </figure>
+<div class="private-form">
+    <h2>Edita tu perfil</h2>
 
-<form action="edit/{{user._id}}" method="post" enctype="multipart/form-data">
-   
-    <label for="">Nombre:</label>
-    <input type="text" name="username" value="{{user.username}}">
-
-    <label for="">Email:</label>
-    <input type="email" name="email" value="{{user.email}}">
-
-    <label for="">Descripción:</label>
-    <input type="text" name="description" value="{{user.description}}">
-
+    <form action="edit/{{user._id}}" method="post" enctype="multipart/form-data">
     
-    {{#if isGallery}}
-    
-    <label>Ubicación exacta:</label>
-    <label for="lat">Latitud</label>
-    <input type="text" name="latitude" placeholder="{{user.location.coordinates.[0]}}" id="lat">
-    <label for="lng">Longitud</label>
-    <input type="text" name="longitude" placeholder="{{user.location.coordinates.[1]}}" id="lng">
-    
-    {{/if}}
-    
-    <label for="profile-photo">Subir nueva foto de perfil</label>
-    <input type="file" name="photo" id="profile-photo">
+        <label for="">Nombre:</label>
+        <input type="text" name="username" value="{{user.username}}">
+
+        <label for="">Email:</label>
+        <input type="email" name="email" value="{{user.email}}">
+
+        <label for="">Descripción:</label>
+        <input type="text" name="description" value="{{user.description}}">
+
+        
+        {{#if isGallery}}
+        
+        <label>Ubicación exacta:</label>
+        <label for="lat">Latitud</label>
+        <input type="text" name="latitude" placeholder="{{user.location.coordinates.[0]}}" id="lat">
+        <label for="lng">Longitud</label>
+        <input type="text" name="longitude" placeholder="{{user.location.coordinates.[1]}}" id="lng">
+        
+        {{/if}}
+        
+        <label for="profile-photo">Subir nueva foto de perfil</label>
+        <input type="file" name="photo" id="profile-photo">
 
 
 
-    <button type="submit">Salvar cambios</button>
+        <button type="submit">Salvar cambios</button>
+        <a href="/private/arts">Tus obras</a>
 
-</form>
+    </form>
 
-<a href="/private/arts">Más</a>
+</div>
+
+</div>

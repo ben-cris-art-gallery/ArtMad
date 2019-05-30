@@ -100,7 +100,8 @@
 }
 /*----HERO----*/
 .hero{
-    width: 94vw;
+    margin-left: 1em;
+    width: 90vw;
     height: 470px;
     background-image: url('/images/picasso-hero.jpg');
 }
@@ -191,6 +192,8 @@
     
 }
 .descripion-info {
+    font-size: 0.7em;
+    color: grey;
     height: 20px;
     text-align: center;
     width: 300px;
@@ -243,11 +246,16 @@
     
 }
 
+.name-link a{
+    color:black;
+    text-decoration: none;
+}
+
 /*---------- login -----------*/
 
 
 .form-container{
-    padding-top: 50px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -256,10 +264,25 @@
     margin-bottom: 30px;
    
 }
+.form-container-login{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height : 700px;
+    height : 90vh;
+    margin-bottom: 30px;
+   
+}
+.form-container-login .form form input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .form {
     padding:30px;
     border: 1px solid rgb(199, 199, 199);
 }
+
 .form a {
     display: block;
     padding-top: 30px;
@@ -287,15 +310,86 @@ button{
 }
 
 .input {
-    margin-top: 18px;
+    margin-top: 20px;
 }
 .input select{
     width: 180px;
 }
 
 
+<<<<<<< HEAD
 #map{
     
     width: 60vw;
     height: 500px;
 }
+=======
+/*---------- User private -----------*/
+.container-private {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+
+}
+.private-pic {
+    margin-top:80px;
+}
+.private-pic img{
+    
+    display: block;
+    margin-top: 50px;
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+}
+.private-form  {
+    margin-top:122px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    padding:20px 30px 0px 30px;
+    border: 1px solid rgb(199, 199, 199);
+    height: 609px;
+}
+.private-form form input  {
+    display: block;
+    border:1px solid grey;
+    width:300px;
+    margin-bottom:6px;
+}
+.private-form form label  {
+    display: block;
+}
+.private-form h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500
+}
+.private-form a {
+    display: block;
+    padding-top: 30px;
+
+}
+.user-gallery {
+    margin-top:50px;
+    display: flex;
+    justify-content: space-between; 
+}
+.user-gallery img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+.user-gallery-card {
+    display: flex;
+    flex-direction: column-reverse;
+    width:300px;
+    justify-content: flex-end; 
+
+}
+
+>>>>>>> a003c8dd09459ccbe90db02597dd7a47e523ac2e

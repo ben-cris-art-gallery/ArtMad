@@ -1,11 +1,15 @@
 <h1>estos serán los conteniiiiidooooos</h1>
 
-{{#each user.artworks}}
-<h3>{{this.title}}</h3>
-<p>{{this.genre}}</p>
-<p>{{this.description}}</p>
-<img src="{{this.imgPath}}" alt="Obra">
-{{/each}}
+<div class="user-gallery">
+  {{#each user.artworks}}
+  <div class="user-gallery-card">
+  <p>{{this.description}}</p>
+  <h3>{{this.title}}</h3>
+  <p>{{this.genre}}</p>
+  <img src="{{this.imgPath}}" alt="Obra">
+  </div>
+  {{/each}}
+</div>
 
 
 <form action="arts/new" method="POST" enctype="multipart/form-data">
