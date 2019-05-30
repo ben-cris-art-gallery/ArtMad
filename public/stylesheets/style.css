@@ -1,4 +1,6 @@
-
+.container-all{
+    min-height: 90vh;
+}
 /* layout   */
 
 .navigation {
@@ -31,7 +33,7 @@
     outline-width: 0;
 }
 .navigation nav {
-    margin-top: 25px;
+    margin-top: 28px;
     margin-right: 8vw;
 }
 .navigation a {
@@ -39,6 +41,7 @@
     text-decoration: none;
 }
 .logo{
+
     margin-top: 17px;
     margin-left: 7vw;
     margin-bottom: 14px;
@@ -47,8 +50,27 @@
     font-weight: 400;
     font-size: 2.1em;
     text-decoration: none;
-    color: rgb(19, 18, 18);
+    font-size: 2.3rem;
+	font-weight:  100;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #23008e, #90eeff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
 }
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
 .navigation ul{
     display: inline-block;
     width: 2000px;
