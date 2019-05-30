@@ -11,15 +11,17 @@ router.get("/buscador", (req, res, next) => {
   const {buscaBenGandul} = req.query;
   
   User.find({$or:[{ "username": { "$regex": buscaBenGandul, "$options": "i" } },{ "genre": { "$regex": buscaBenGandul, "$options": "i" } } ]})
+  
   .then(users => {
     ArtWork.find({$or:[
       { "title": { "$regex": buscaBenGandul, "$options": "i" } },
       { "genre": { "$regex": buscaBenGandul, "$options": "i" } } 
     ]})
+    .populate('author')
     .then(arts => {
       console.log(users);
       console.log(arts);
-      res.render("buscador", {users, arts});
+      res.render("buscador", {users, arts, User});
     })
   })
 })
