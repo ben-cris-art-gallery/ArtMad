@@ -1,0 +1,10 @@
+<div class="artist-description">
+  <h2>{{theArtwork.title}}</h2>
+  <img src="{{theArtwork.imgPath}}" alt="profile picture" >
+</div>
+<hr>
+<p>{{theArtwork.description}}</p> 
+{{#if user}}
+  <h4>Contactar</h4>
+  {{theAuthor.email}}
+{{/if}}

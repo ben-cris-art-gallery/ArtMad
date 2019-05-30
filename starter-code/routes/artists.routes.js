@@ -29,7 +29,7 @@ router.get('/detail/:artist_id',(req,res)=>{
         res.render('artist/artist-description', {artist})
       })
          .catch(error => console.log(error))
-})
+ })
 
 
 

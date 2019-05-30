@@ -1,18 +1,26 @@
-// const usersAPI = new APIHandler('http://localhost:3000/api')
-console.log('hola')
-
 window.onload=()=>{
     const map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
+        zoom: 20,
         center: {
-            lat: 40.42526,
-            lng:-3.69063
+            lat: coor.coordinates[0],
+            lng: coor.coordinates[1]
         }
+        
     })
-    let center={
-        lat: undefined,
-        lng: undefined,
-    }
-   // getGalleryLocation(map)
+    getMarker(map)
 }
 
+
+
+const getMarker=(myMap)=>{
+
+    const location={
+        lat: coor.coordinates[0],
+        lng: coor.coordinates[1]
+    }
+    new google.maps.Marker({
+        position: location,
+        map: myMap,
+        title: username
+    }) 
+}

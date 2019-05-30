@@ -292,3 +292,10 @@ button{
 .input select{
     width: 180px;
 }
+
+
+#map{
+    
+    width: 60vw;
+    height: 500px;
+}

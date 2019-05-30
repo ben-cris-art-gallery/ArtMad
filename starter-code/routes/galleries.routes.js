@@ -23,7 +23,7 @@ router.get('/list',(req, res)=>{
   // })
 
   router.get('/detail/:gallery_id',(req,res)=>{
-    console.log(req.params.user_id)
+    console.log(req.params.gallery_id)
     User.findById(req.params.gallery_id)
     .populate("artworks")
       .then((gallery) => {
@@ -31,7 +31,7 @@ router.get('/list',(req, res)=>{
           console.log("estos son los artworks ==>" + gallery.artworks)
           //let thisArtist = artist.find(thisArtist => thisArtist._id == req.params.artist_id)
           //console.log(`Este es el artist ${thisArtist}`)
-          res.render('gallery/gallery-description', {gallery})
+          res.render('gallery/gallery-description', {gallery, galleryJSON:JSON.stringify(gallery)})
         })
            .catch(error => console.log(error))
   })

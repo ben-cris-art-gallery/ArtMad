@@ -10,7 +10,8 @@
 
 <div class="artist-description-art">
   {{#each artist.artworks}}
-   <a href="#"><img src="{{this.imgPath}}" alt="{{this.imgName}}"></a> 
+   <a href="/artworks/detail/{{this._id}}"><img src="{{this.imgPath}}" alt="{{this.imgName}}"></a>
+  
   {{/each}}
 </div>
 

@@ -14,6 +14,7 @@ User.collection.deleteMany()
 Artwork.collection.deleteMany()
 
 const users = [
+  {},
   {
     username: "Candela Muniozguren",
     password: hashPass,

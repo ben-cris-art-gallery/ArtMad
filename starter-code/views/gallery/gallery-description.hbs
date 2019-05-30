@@ -8,12 +8,15 @@
 
 <div class="artist-description-art">
   {{#each gallery.artworks}}
-   <a href="#"><img src="{{this.imgPath}}" alt="{{this.imgName}}"></a> 
+   <a href="/artworks/detail/{{this._id}}"><img src="{{this.imgPath}}" alt="{{this.imgName}}"></a> 
   {{/each}}
 </div>
 
 <figure id="map"></figure>
-
+<script>
+  const coor = {{{gallery.location}}}
+  const {username} = {{{galleryJSON}}}
+</script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG88rK2sVwRDbZIJautuIZpNt32kAQpSU"></script>
 <script src="/javascripts/gallery-map.js"></script>
