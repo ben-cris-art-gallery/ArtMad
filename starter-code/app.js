@@ -21,7 +21,7 @@ mongoose.connect(`mongodb://localhost:27017/${process.env.DB}`);
 const app = express();
 
 
-
+app.locals.googleKey = process.env.GOOGLEKEY
 
 
 app.set('views', path.join(__dirname, 'views'));
