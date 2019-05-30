@@ -13,7 +13,7 @@ const MongoStore         = require('connect-mongo')(session);
 const mongoose           = require('mongoose');
 const flash              = require('connect-flash');
 const hbs                = require('hbs')
-const dotenv             = require('dotenv').config()
+require('dotenv').config()
 
 
 mongoose.connect(process.env.DB, {useNewUrlParser: true})
