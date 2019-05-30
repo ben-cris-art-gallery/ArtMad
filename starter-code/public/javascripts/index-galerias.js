@@ -30,7 +30,7 @@ usersAPI.getFullListGalleries()
 
         let name = document.createElement('div')
             
-        name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.username}</a>`
+        name.innerHTML = `<a href="http://localhost:3000/galleries/detail/${user._id}">${user.username}</a>`
             
         mediumDiv.appendChild(name) 
 

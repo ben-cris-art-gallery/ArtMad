@@ -13,7 +13,7 @@ mongoose.connect(`mongodb://localhost/${process.env.DB}`)
 User.collection.deleteMany()
 Artwork.collection.deleteMany()
 
-const users = [{},
+const users = [
   {
     username: "Candela Muniozguren",
     password: hashPass,
@@ -80,7 +80,10 @@ const users = [{},
     imgName: "herraizGaleria_qcikvf",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132571/artmad/herraizGaleria_qcikvf.png",
     genre: ['pintura', 'escultura', 'fotografia'],
-    location: [40.428833, -3.678207]
+    location:  {
+      type: 'Point',
+      coordinates:  [40.428833, -3.678207] 
+    } 
   },
   {
     username: "Galería Kreisler",
@@ -96,7 +99,10 @@ const users = [{},
     imgName: "kreislerGaleria_racgne",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132582/artmad/kreislerGaleria_racgne.png",
     genre: ['pintura', 'escultura','instalacion'],
-    location: [40.4264718, -3.6883202]
+    location:  {
+      type: 'Point',
+      coordinates: [40.4264718, -3.6883202]
+    }  
   },
   {
     username: "Galería Bat Alberto Cornejo",
@@ -109,7 +115,10 @@ const users = [{},
     imgName: "batGaleria_luoqzl",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132565/artmad/batGaleria_luoqzl.png",
     genre: ['pintura', 'fotografia', 'instalacion'],
-    location: [40.4440471, -3.6962407]
+    location: {
+      type: 'Point',
+      coordinates: [40.4440471, -3.6962407]
+    } 
   },
   {
   username: "Galería Juana de Aizpuru",
@@ -124,7 +133,10 @@ const users = [{},
     imgName: "juanaGaleria_oh6v6k",
     imgPath: "https://res.cloudinary.com/dgesryvti/image/upload/v1559132576/artmad/juanaGaleria_oh6v6k.png",
     genre: ['escultura', 'fotografia', 'instalacion'],
-    location: [40.4242672, -3.6954675]
+    location: {
+      type: 'Point',
+      coordinates: [40.4242672, -3.6954675]
+    }  
   }
 ]
 

@@ -1,1 +1,19 @@
-<h1>Ésta es la descripción de la galería</h1>
+<div class="artist-description">
+  <h2>{{gallery.username}}</h2>
+  <img src="{{gallery.imgPath}}" alt="profile picture" >
+</div>
+<hr>
+<p>{{gallery.description}}</p> 
+
+
+<div class="artist-description-art">
+  {{#each gallery.artworks}}
+   <a href="#"><img src="{{this.imgPath}}" alt="{{this.imgName}}"></a> 
+  {{/each}}
+</div>
+
+<figure id="map"></figure>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG88rK2sVwRDbZIJautuIZpNt32kAQpSU"></script>
+<script src="/javascripts/gallery-map.js"></script>
