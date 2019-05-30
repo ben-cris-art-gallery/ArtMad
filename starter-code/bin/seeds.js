@@ -10,11 +10,10 @@ const hashPass = bcrypt.hashSync('1234', bcrypt.genSaltSync(8), null);
 //const dbName = 'MAD-ART'
 mongoose.connect(`mongodb://localhost/${process.env.DB}`)
 
-User.collection.deleteMany()
-Artwork.collection.deleteMany()
+
 
 const users = [
-  {},
+  
   {
     username: "Candela Muniozguren",
     password: hashPass,

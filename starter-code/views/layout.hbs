@@ -26,7 +26,7 @@
         <li><a href="/artist/list">ARTISTAS</a></li>
         <li><a href="/artworks/list">OBRAS</a></li>
         {{!-- <li><a href="/events">CALENDARIO</a></li> --}}
-        <li><input type="search" placeholder="Buscar"></li>
+        <li><form action="/buscador" method="get"><input type="search" name="buscaBenGandul" placeholder="Buscar" id="search"></form></li>
         
          {{#if user}}<li id="login"><a href="/private/profile">Perfil</a></li> {{else}}<li id="signin"><a href="/signup">Register</a></li>{{/if}}
         <li id="separator">|</li>
