@@ -28,16 +28,16 @@ usersAPI.getFullListArtworks()
               
         mediumDiv.setAttribute('class', 'user-info')
 
-        let name = document.createElement('div')
-            
-        name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`
-            
-        mediumDiv.appendChild(name) 
-        
         let description = document.createElement('div')
         description.setAttribute('class', 'descripion-info')
         description.innerHTML = `<p>${user.genre}</p>`
         mediumDiv.appendChild(description) 
+
+        let name = document.createElement('div')
+        name.setAttribute('class', 'name-link')
+        name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`
+        mediumDiv.appendChild(name) 
+        
 
         let profileImg = document.createElement('img')
         profileImg.setAttribute('src', `${user.imgPath}`)
@@ -54,15 +54,17 @@ const paintSelection = (allUsers) =>{
   allUsers.forEach(user => { 
     const mediumDiv = document.createElement('div')  
     mediumDiv.setAttribute('class', 'user-info')
-
-    let name = document.createElement('div')  
-    name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`  
-    mediumDiv.appendChild(name) 
-
+    
     let description = document.createElement('div')
     description.setAttribute('class', 'descripion-info')
     description.innerHTML = `<p>${user.genre}</p>`
     mediumDiv.appendChild(description) 
+
+    let name = document.createElement('div')  
+    name.setAttribute('class', 'name-link')
+    name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`  
+    mediumDiv.appendChild(name) 
+
     
     let profileImg = document.createElement('img')
     profileImg.setAttribute('src', `${user.imgPath}`)

@@ -27,13 +27,19 @@
         <li><a href="/artworks/list">OBRAS</a></li>
         {{!-- <li><a href="/events">CALENDARIO</a></li> --}}
         <li><input type="search" placeholder="Buscar"></li>
-        <li id="signin"><a href="/signup">Register</a></li>
+        
+         {{#if user}}<li id="login"><a href="/private/profile">Perfil</a></li> {{else}}<li id="signin"><a href="/signup">Register</a></li>{{/if}}
         <li id="separator">|</li>
-        <li id="login"><a href="/login">Login</a></li>
+         {{#if user}}<li id="login"><a href="/logout">Logout</a></li>  {{else}} <li id="login"><a href="/login">Login</a></li>{{/if}}
+        
       </ul>
     </nav>
   </header>
 
+  
+    
+    
+   
 
   <main class='content'>
     {{{body}}}
