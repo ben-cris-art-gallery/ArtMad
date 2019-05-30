@@ -33,16 +33,18 @@ usersAPI.getFullListArtworks()
         name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`
             
         mediumDiv.appendChild(name) 
+        
+        let description = document.createElement('div')
+        description.setAttribute('class', 'descripion-info')
+        description.innerHTML = `<p>${user.genre}</p>`
+        mediumDiv.appendChild(description) 
 
         let profileImg = document.createElement('img')
         profileImg.setAttribute('src', `${user.imgPath}`)
         mediumDiv.appendChild(profileImg) 
 
-        let description = document.createElement('div')
-        description.setAttribute('class', 'descripion-info')
-        description.innerHTML = `<p>${user.description}</p>`
         
-        mediumDiv.appendChild(description) 
+
         userContainer.appendChild(mediumDiv)  
   });
 
@@ -52,16 +54,21 @@ const paintSelection = (allUsers) =>{
   allUsers.forEach(user => { 
     const mediumDiv = document.createElement('div')  
     mediumDiv.setAttribute('class', 'user-info')
+
     let name = document.createElement('div')  
-    name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.username}</a>`  
+    name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`  
     mediumDiv.appendChild(name) 
+
+    let description = document.createElement('div')
+    description.setAttribute('class', 'descripion-info')
+    description.innerHTML = `<p>${user.genre}</p>`
+    mediumDiv.appendChild(description) 
+    
     let profileImg = document.createElement('img')
     profileImg.setAttribute('src', `${user.imgPath}`)
     mediumDiv.appendChild(profileImg) 
-    let description = document.createElement('div')
-    description.setAttribute('class', 'descripion-info')
-    description.innerHTML = `<p>${user.description}</p>`
-    mediumDiv.appendChild(description) 
+
+
     userContainer.appendChild(mediumDiv)  
 });
 }
@@ -70,7 +77,7 @@ const paintSelection = (allUsers) =>{
 
 fotografiaInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("fotografia")
+  usersAPI.getFullListArtworksGenre ("fotografia")
 
   .then(allUsers=>{
         
@@ -85,7 +92,7 @@ fotografiaInput.onclick = ()=>{
 
 pinturaInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("pintura")
+  usersAPI.getFullListArtworksGenre ("pintura")
 
   .then(allUsers=>{
         
@@ -100,7 +107,7 @@ pinturaInput.onclick = ()=>{
 
 esculturaInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("escultura")
+  usersAPI.getFullListArtworksGenre ("escultura")
 
   .then(allUsers=>{
         
@@ -114,7 +121,7 @@ esculturaInput.onclick = ()=>{
 
 instalacionInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("instalacion")
+  usersAPI.getFullListArtworksGenre ("instalacion")
 
   .then(allUsers=>{
         
@@ -128,7 +135,7 @@ instalacionInput.onclick = ()=>{
 
 collageInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("collage")
+  usersAPI.getFullListArtworksGenre ("collage")
 
   .then(allUsers=>{
         
@@ -142,7 +149,7 @@ collageInput.onclick = ()=>{
 
 ilustracionInput.onclick = ()=>{
   userContainer.innerHTML=" "
-  usersAPI.getFullListArtistsGenre ("ilustracion")
+  usersAPI.getFullListArtworksGenre ("ilustracion")
 
   .then(allUsers=>{
         

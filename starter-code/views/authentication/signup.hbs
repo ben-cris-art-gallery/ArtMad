@@ -1,31 +1,47 @@
 {{ message }}
-<div class="vertical-space">
+<div class="hero-section">
+<hr>
+</div>
+<div class="form-container">
 
-
+<div class="form">
+  <h2>Bienvenido</h2>
 <form action="/signup" method="post" enctype="multipart/form-data" >
-  
-    <label for="username">Usuario</label>
-    <input type="text" name="username" class="form-control" placeholder="Nombre de usuario">
-  
-    <select name="role" id="roll">
 
-      <option value="">Selecciona una opción</option>
-      <option  value="GALLERY">GALLERY</option>
-      <option  value="ARTIST">ARTIST</option>
+    <div class="input">
+        <label for="username">Usuario</label>
+        <input type="text" name="username" class="form-control" placeholder="Nombre de usuario">
+    </div>
       
-    </select> 
+    <div class="input">
+        <label for="role">Tipo de perfil</label>
+        <select name="role" id="roll">
+
+        <option value=""></option>
+        <option  value="GALLERY">GALLERY</option>
+        <option  value="ARTIST">ARTIST</option>
+    <div>
+        
+      </select> 
     
-    <label for="email">Email</label>
-    <input type="text" name="email" class="form-control" placeholder="Dirección de email">
+    <div class="input">
+       <label for="email">Email</label>
+       <input type="text" name="email" class="form-control" placeholder="Dirección de email">
+    </div>
+   
+    <div class="input">
+       <label for="password">Contraseña</label>
+       <input type="password" name="password" class="form-control" placeholder="*********">
+    </div>
   
-    <label for="password">Contraseña</label>
-    <input type="password" name="password" class="form-control" placeholder="*********">
-  
-    <label for="photo">Foto de perfil</label>
-    <input type="file" name="photo" class="form-control">
+    <div class="input">
+       <label for="photo">Foto de perfil</label>
+       <input type="file" name="photo" class="form-control">
+    </div>
   
   <button type="submit">Signup</button>
 </form>
   
 <a href="/">Volver a inicio</a>
+</div>
 </div>

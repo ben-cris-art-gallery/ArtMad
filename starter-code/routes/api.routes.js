@@ -17,6 +17,18 @@ router.get('/artworks', (req, res, next)=>{
   .catch(error => console.log(error))
 })
 
+router.get('/artworks/genre/:genre', (req, res, next) =>{
+  Artwork.find({ genre:req.params.genre })
+  .then((user) => {
+    console.log(req.params.genre)
+    res.json(user)
+  
+    })
+  .catch(error => console.log(error))
+  
+  })
+
+
 router.get('/:id', (req, res, next) =>{
   console.log('------------------------------------------------------------------------------------------------------------------------------')
 

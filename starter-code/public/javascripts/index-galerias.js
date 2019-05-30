@@ -38,11 +38,11 @@ usersAPI.getFullListGalleries()
         profileImg.setAttribute('src', `${user.imgPath}`)
         mediumDiv.appendChild(profileImg) 
 
-        let description = document.createElement('div')
-        description.setAttribute('class', 'descripion-info')
-        description.innerHTML = `<p>${user.description}</p>`
+        // let description = document.createElement('div')
+        // description.setAttribute('class', 'descripion-info')
+        // description.innerHTML = `<p>${user.description}</p>`
         
-        mediumDiv.appendChild(description) 
+        // mediumDiv.appendChild(description) 
         userContainer.appendChild(mediumDiv)  
   });
 

@@ -49,7 +49,7 @@
 }
 .navigation li input{
     width: 250px;
-    margin-left: 150px;
+    margin-left: 200px;
  
 }
 .navigation li a {
@@ -138,11 +138,29 @@
     font-size: 0.9em;    
 }
 /*----artists list----*/
+.hero-section {
+    align-items: center;
+    padding-top: 80px;
+  
+}
+.hero-section hr {
+    width:1235px;
+   
+}
+.hero-section h2 {
+    margin-top: 0;
+    margin-left:45px;
+}
 .contain {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
+}
+
+.param-list{
+    margin-left: 50px;
+    margin-top: 40px;
 }
 .section-title {
 
@@ -150,19 +168,31 @@
    font-weight: 300;
 }
 .artist-list {
+    margin-top:0px;
+    margin-bottom :70px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
-    width: 800px;
+    width: 1000px;
 }
 .artist-list img {
-    width:300px;
+    width:250px;
+    height:250px;
+    object-fit: cover;
 }
 .user-info {
-    width: 400px
+    justify-content: start;
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+    width: 330px;
+    height: 308px;
+    
 }
 .descripion-info {
+    height: 20px;
+    text-align: center;
     width: 300px;
 }
 
@@ -215,12 +245,50 @@
 
 /*---------- login -----------*/
 
-.vertical-space {
+
+.form-container{
+    padding-top: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     height : 700px;
     height : 90vh;
-}
-.vertical-space form{
+    margin-bottom: 30px;
    
+}
+.form {
+    padding:30px;
+    border: 1px solid rgb(199, 199, 199);
+}
+.form a {
+    display: block;
+    padding-top: 30px;
+
+}
+.form h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500
+}
+button{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* show a hand cursor on hover; some argue that we
+    should keep the default arrow cursor for buttons */
+    cursor: pointer;
+   margin-top: 18px;
+   display: block;
+}
+
+.form label{
+  display: block;
+}
+
+.input {
+    margin-top: 18px;
+}
+.input select{
+    width: 180px;
 }
