@@ -27,6 +27,12 @@ class APIHandler {
     return axios.get(`${this.BASE_URL}/artworks`)
       .then(allArtworks=>allArtworks.data)
   }
+  getFullListArtworksGenre (genre) {
+    return axios.get(`${this.BASE_URL}/artworks/genre/${genre}`)
+    .then(allUsers=>allUsers.data)
+  }
+ 
+
   
   
   getOneRegister (id) {

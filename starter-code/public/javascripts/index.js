@@ -33,16 +33,19 @@ usersAPI.getFullListArtists()
         name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.username}</a>`
             
         mediumDiv.appendChild(name) 
+        
+        let description = document.createElement('div')
+        description.setAttribute('class', 'descripion-info')
+        description.innerHTML = `<p>${user.genre}</p>`
+        mediumDiv.appendChild(description) 
 
         let profileImg = document.createElement('img')
         profileImg.setAttribute('src', `${user.imgPath}`)
         mediumDiv.appendChild(profileImg) 
 
-        let description = document.createElement('div')
-        description.setAttribute('class', 'descripion-info')
-        description.innerHTML = `<p>${user.description}</p>`
+     
         
-        mediumDiv.appendChild(description) 
+       
         userContainer.appendChild(mediumDiv)  
   });
 
@@ -55,14 +58,18 @@ const paintSelection = (allUsers) =>{
     let name = document.createElement('div')  
     name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.username}</a>`  
     mediumDiv.appendChild(name) 
+
+    let description = document.createElement('div')
+    description.setAttribute('class', 'descripion-info')
+    description.innerHTML = `<p>${user.genre}</p>`
+    mediumDiv.appendChild(description) 
+    userContainer.appendChild(mediumDiv)  
+
     let profileImg = document.createElement('img')
     profileImg.setAttribute('src', `${user.imgPath}`)
     mediumDiv.appendChild(profileImg) 
-    let description = document.createElement('div')
-    description.setAttribute('class', 'descripion-info')
-    description.innerHTML = `<p>${user.description}</p>`
-    mediumDiv.appendChild(description) 
-    userContainer.appendChild(mediumDiv)  
+    
+    
 });
 }
   
