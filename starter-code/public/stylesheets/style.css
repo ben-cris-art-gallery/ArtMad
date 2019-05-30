@@ -1,91 +1,132 @@
+
+
+/* layout   */
+
 .navigation {
     z-index: 10;
     display: flex;
     justify-content: space-between;
-    text-transform: uppercase;
     position: fixed;
     width: 100%;
-    padding: 20px 30px;
     background-color: white;
+
+}
+#separator { 
+    margin: 0;
+}
+#login { 
+    margin: 0;
+}
+#signup { 
+    margin: 0;
+}
+.navigation nav {
+    margin-top: 25px;
+    margin-right: 8vw;
+}
+.navigation a {
+    color: black;
+    text-decoration: none;
 }
 .logo{
-   
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-top: 17px;
+    margin-left: 7vw;
+    margin-bottom: 14px;
     text-transform: uppercase;
     font-family: 'Righteous';
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: 2.1em;
     text-decoration: none;
     color: rgb(19, 18, 18);
 }
 .navigation ul{
     display: inline-block;
+    width: 2000px;
 }
 .navigation li {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 15px;
+}
+.navigation li input{
+    width: 250px;
+    margin-left: 150px;
+ 
 }
 .navigation li a {
     text-decoration: none;
     color: rgb(19, 18, 18);
-    font-weight: bolder;
+    font-weight: bold;
     display: inline;
     font-family: 'Montserrat';
-    font-size: 1em;
+    font-size: 0.98em;
 }
-.content{
-    padding-top: 200px;
+.content {
+    padding-top: 0px;
     margin-left: 4vw;
     margin-right: 4vw;
 }
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
 .footer ul{
-    display: inline-block;
+    width:2000px;
 }
 .footer li {
     display: inline-block;
-    margin: 0 60px;
+    margin: 0 38px;
 }
 .footer li a {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     color: rgb(19, 18, 18);
-    font-weight: bolder;
     display: block;
     
 }
-.footer hr{
+#footer-hr {
     width: 92vw;
     display: block;
     margin-left: 4vw;
 }
 .footlogo{
     font-family: 'Righteous';
-    font-size: 2em;
+    font-size: 1em;
 }
 .footer img{
     width: 25px;
 }
 /*----HERO----*/
 .hero{
-    width: 92vw;
-    height: 50vh;
+    width: 94vw;
+    height: 470px;
     background-image: url('/images/picasso-hero.jpg');
 }
 /*----Seleccion----*/
+.selection {
+    width:200px;
+}
 .selection img{
-    height: 220px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
     object-fit: cover;
 }
 .inicio{
    margin: 5px 30px;
    font-family: 'Montserrat'
 }
+.inicio h2{
+  font-size: 1em;
+  text-align: center;
+}
 .center{
     margin-left: 4%;
 }
 .inicio h1{
-    padding: 2% 0;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 18px;
     font-weight: lighter;
     font-size: 2em;
 }
@@ -172,3 +213,14 @@
     
 }
 
+/*---------- login -----------*/
+
+.vertical-space {
+    display: flex;
+    align-items: center;
+    height : 700px;
+    height : 90vh;
+}
+.vertical-space form{
+   
+}

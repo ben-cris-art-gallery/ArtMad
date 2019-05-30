@@ -18,16 +18,18 @@
 </head>
 <body>
   <header class="navigation">
+    <a href="/" class='logo'>Artmad</a>
+    
     <nav>
-        <a href="/" class='logo'>Artmad</a>
       <ul>
-        <li><a href="/galleries/list">Galerías</a></li>
-        <li><a href="/artist/list">Artistas</a></li>
-        <li><a href="/artworks/list">Obras</a></li>
-        <li><a href="/events">Calendario</a></li>
+        <li><a href="/galleries/list">GALERIAS</a></li>
+        <li><a href="/artist/list">ARTISTAS</a></li>
+        <li><a href="/artworks/list">OBRAS</a></li>
+        <li><a href="/events">CALENDARIO</a></li>
         <li><input type="search" placeholder="Buscar"></li>
-        <li><a href="/signup">Sign Up</a></li>
-        <li><a href="/login">Login</a></li>
+        <li id="signin"><a href="/signup">Login</a></li>
+        <li id="separator">|</li>
+        <li id="login"><a href="/login">Register</a></li>
       </ul>
     </nav>
   </header>
@@ -36,13 +38,13 @@
   <main class='content'>
     {{{body}}}
   </main>
-
-
+  
+  <hr id="footer-hr">
   <footer class="footer">
-    <hr>
+    
     <ul>
       <li>
-         <a href="/">© 2019  <span class='footlogo'>Artmad</span></a>
+         <p>©2019 <span class='footlogo'>Artmad</span></p>  
       </li>
       <li> <a href="/about">Sobre Nosotros</a></li>
       <li><a href="/terms">Términos y condiciones</a></li>
