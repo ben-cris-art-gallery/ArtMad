@@ -317,13 +317,11 @@ button{
 }
 
 
-<<<<<<< HEAD
 #map{
     
     width: 60vw;
     height: 500px;
 }
-=======
 /*---------- User private -----------*/
 .container-private {
     display: flex;
@@ -392,4 +390,3 @@ button{
 
 }
 
->>>>>>> a003c8dd09459ccbe90db02597dd7a47e523ac2e

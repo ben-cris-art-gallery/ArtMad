@@ -28,15 +28,6 @@ usersAPI.getFullListArtworks()
               
         mediumDiv.setAttribute('class', 'user-info')
 
-<<<<<<< HEAD
-        let name = document.createElement('div')
-            
-        name.innerHTML = `<a href="http://localhost:3000/artworks/detail/${user._id}">${user.title}</a>`
-            
-        mediumDiv.appendChild(name) 
-        
-=======
->>>>>>> a003c8dd09459ccbe90db02597dd7a47e523ac2e
         let description = document.createElement('div')
         description.setAttribute('class', 'descripion-info')
         description.innerHTML = `<p>${user.genre}</p>`
@@ -44,7 +35,7 @@ usersAPI.getFullListArtworks()
 
         let name = document.createElement('div')
         name.setAttribute('class', 'name-link')
-        name.innerHTML = `<a href="http://localhost:3000/artist/detail/${user._id}">${user.title}</a>`
+        name.innerHTML = `<a href="http://localhost:3000/artworks/detail/${user._id}">${user.title}</a>`
         mediumDiv.appendChild(name) 
         
 
