@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const hashPass = bcrypt.hashSync('1234', bcrypt.genSaltSync(8), null);
 
 //const dbName = 'MAD-ART'
-mongoose.connect(process.env.DB)
+mongoose.connect(process.env.DBlocal)
 
 
 

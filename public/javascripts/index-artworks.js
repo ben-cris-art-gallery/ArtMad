@@ -1,6 +1,6 @@
 
 
-const usersAPI = new APIHandler('http://localhost:3000/api')
+const usersAPI = new APIHandler('/api')
 
 //artist container setup
 const userContainer= document.querySelector('.artist-list')
