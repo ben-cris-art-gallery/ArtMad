@@ -271,8 +271,10 @@
     justify-content: start;
 }
 .artist-description-art img {
-    width: 250px;
+    width: 400px;
+    height: 250px;
     margin: 30px;
+    object-fit: cover;
 }
 .profile-picture{
     width: 11px;
@@ -423,3 +425,58 @@ button{
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-cont{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+.search-img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+.search{
+    margin-right: 120px;
+}
