@@ -16,7 +16,7 @@ const hbs                = require('hbs')
 const dotenv             = require('dotenv').config()
 
 
-mongoose.connect(`mongodb://localhost:27017/${process.env.DB}`);
+mongoose.connect(process.env.DB);
 
 const app = express();
 
