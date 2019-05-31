@@ -1,6 +1,9 @@
 <div class="container-all">
+
 <div class="search-cont">
+    
 {{#each users}}
+    
     <div class="search">
         <img src="{{this.imgPath}}" alt="prueba" class="search-img">
         <h4> <a href="/artist/detail/{{this._id}}"> {{this.username}}</a></h4>
@@ -9,7 +12,9 @@
 {{/each}}
 </div>
 
+
 <div class="search-cont">
+    
 {{#each arts}}
     <div class="search">
         <img src="{{this.imgPath}}" alt="prueba" class="search-img">

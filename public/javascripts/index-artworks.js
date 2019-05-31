@@ -39,9 +39,10 @@ usersAPI.getFullListArtworks()
         mediumDiv.appendChild(name) 
         
 
-        let profileImg = document.createElement('img')
-        profileImg.setAttribute('src', `${user.imgPath}`)
-        mediumDiv.appendChild(profileImg) 
+        let profileImg = document.createElement('div')
+        profileImg.innerHTML = `<a href="/artworks/detail/${user._id}"><img src="${user.imgPath}" alt=""></a>`
+        //profileImg.setAttribute('src', `${user.imgPath}`)
+        mediumDiv.appendChild(profileImg)  
 
         
 
@@ -66,10 +67,11 @@ usersAPI.getFullListArtworks()
     mediumDiv.appendChild(name) 
 
     
-    let profileImg = document.createElement('img')
-    profileImg.setAttribute('src', `${user.imgPath}`)
-    mediumDiv.appendChild(profileImg) 
 
+    let profileImg = document.createElement('div')
+    profileImg.innerHTML = `<a href="/artworks/detail/${user._id}"><img src="${user.imgPath}" alt=""></a>`
+    //profileImg.setAttribute('src', `${user.imgPath}`)
+    mediumDiv.appendChild(profileImg)  
 
     userContainer.appendChild(mediumDiv)  
 });

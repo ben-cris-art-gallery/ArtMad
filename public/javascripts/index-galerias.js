@@ -41,10 +41,14 @@ usersAPI.getFullListGalleries()
             
         mediumDiv.appendChild(name) 
 
-        
-        let profileImg = document.createElement('img')
-        profileImg.setAttribute('src', `${user.imgPath}`)
+        let profileImg = document.createElement('div')
+        profileImg.innerHTML = `<a href="/artist/detail/${user._id}"><img src="${user.imgPath}" alt=""></a>`
+        //profileImg.setAttribute('src', `${user.imgPath}`)
         mediumDiv.appendChild(profileImg) 
+
+        // let profileImg = document.createElement('img')
+        // profileImg.setAttribute('src', `${user.imgPath}`)
+        // mediumDiv.appendChild(profileImg) 
 
         userContainer.appendChild(mediumDiv)  
   });
@@ -68,8 +72,9 @@ const paintSelection = (allUsers) =>{
     name.innerHTML = `<a href="/artist/detail/${user._id}">${user.username}</a>`  
     mediumDiv.appendChild(name) 
 
-    let profileImg = document.createElement('img')
-    profileImg.setAttribute('src', `${user.imgPath}`)
+    let profileImg = document.createElement('div')
+    profileImg.innerHTML = `<a href="/artist/detail/${user._id}"><img src="${user.imgPath}" alt=""></a>`
+    //profileImg.setAttribute('src', `${user.imgPath}`)
     mediumDiv.appendChild(profileImg) 
 });
 }
