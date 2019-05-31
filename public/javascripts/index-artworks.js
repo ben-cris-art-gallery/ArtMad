@@ -46,11 +46,11 @@ usersAPI.getFullListArtworks()
         
 
         userContainer.appendChild(mediumDiv)  
-  });
-
+  })
+ 
 })
 
-const paintSelection = (allUsers) =>{
+  const paintSelection = (allUsers) =>{
   allUsers.forEach(user => { 
     const mediumDiv = document.createElement('div')  
     mediumDiv.setAttribute('class', 'user-info')

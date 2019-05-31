@@ -41,10 +41,12 @@ app.use(session({
 }))
 
 passport.serializeUser((user, cb) => {
+  console.log("serializeUser")
   cb(null, user.id);
 });
 
 passport.deserializeUser((id, cb) => {
+  console.log("deserializeUser")
   User.findById(id, (err, user) => {
     if (err) { return cb(err); }
     cb(null, user);
@@ -52,6 +54,7 @@ passport.deserializeUser((id, cb) => {
 });
 
 passport.use('local-login', new LocalStrategy((username, password, next) => {
+  console.log("LOGIN")
   User.findOne({ username }, (err, user) => {
     if (err) {
       return next(err);
@@ -78,16 +81,17 @@ passport.use('local-signup',  new LocalStrategy(
   (req, username, password, next) => {
     // To avoid race conditions
     process.nextTick(() => {
+      console.log("entrasss!!!")
         User.findOne({
             'username': username
         }, (err, user) => {
-            if (err){ return next(err); }
+            if (err){console.log(err); return next(err); }
 
             if (user) {
                 return next(null, false);
             } else {
                 // Destructure the body
-                const { username, email, password, role } = req.body;
+                const {  email, role } = req.body;
                 console.log(req.file)
                 const imgPath = req.file.url
                 const imgName = req.file.originalname
@@ -102,7 +106,7 @@ passport.use('local-signup',  new LocalStrategy(
                 });
 
                 newUser.save((err) => {
-                    if (err){ next(null, false, { message: newUser.errors }) }
+                    if (err){ console.log(err);next(null, false, { message: newUser.errors }) }
                     return next(null, newUser);
                 });
             }

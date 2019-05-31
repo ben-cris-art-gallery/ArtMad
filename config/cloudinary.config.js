@@ -15,10 +15,10 @@ var storage = cloudinaryStorage({
     folder: 'First_cloudinary', 
     allowedFormats: ['jpg', 'png'],
     filename: function (req, file, cb) {
-        cb(null, file.originalname) 
+        cb(null, file.originalname+new Date().getDate()) 
     }
 })
-
 const uploadCloud = multer({ storage: storage })
+console.log("entra")
 
 module.exports = uploadCloud

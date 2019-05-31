@@ -1,6 +1,11 @@
 .container-all{
-   
+    padding-top:30px;
     min-height: 85vh;
+}
+.container-all h2{
+    margin-top: 70px;
+    display:block;
+    margin-left: 400px;
 }
 /* layout   */
 
@@ -146,6 +151,11 @@
     height: 200px;
     width: 200px;
     object-fit: cover;
+    margin-top: 10px;
+}
+.selection img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 .inicio{
    margin: 5px 30px;
@@ -225,6 +235,13 @@
     height: 308px;
     
 }
+.user-info img:hover{
+    transform: scale(1.04);
+    transition: 0.5s;
+}
+.user-info img {
+    margin-bottom : 5px;
+}
 .descripion-info {
     font-size: 0.7em;
     color: grey;
@@ -265,6 +282,8 @@
     margin-top: 135px;
     margin-bottom: 15px;
     height: 420px;
+    max-width:600px;
+    object-fit: cover;
 }
 
 .artist-description-art{
@@ -278,6 +297,11 @@
     height: 250px;
     margin: 30px;
     object-fit: cover;
+}
+
+.artist-description-art img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 .profile-picture{
     width: 11px;
@@ -356,7 +380,7 @@ button{
 
 
 #map{
-    
+    margin-left: 62px;
     width: 60vw;
     height: 500px;
 }
@@ -427,58 +451,22 @@ button{
     justify-content: flex-end; 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .search-cont{
     display: flex;
     flex-wrap: wrap;
     padding-top: 100px;
+    
 }
 .search-img{
     width: 250px;
     height: 250px;
     object-fit: cover;
+    margin-bottom:15px;
+    margin-top:10px;
+}
+.search-img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 .search{
     margin-right: 120px;
