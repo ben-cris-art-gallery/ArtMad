@@ -1,11 +1,9 @@
 .container-all{
-    padding-top:30px;
-    min-height: 85vh;
+   
+    min-height: 100vh;
 }
 .container-all h2{
-    margin-top: 70px;
-    display:block;
-    margin-left: 400px;
+ color: black;
 }
 /* layout   */
 
